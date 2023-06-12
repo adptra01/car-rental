@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call([
+            CategoriesSeeder::class
+        ]);
+        
         $file = UploadedFile::fake()->image('thumbnail.jpg');
         $fileName = rand(0,9999999) . '_' . $file->getClientOriginalName();
         $filePath = $file->storeAs('Idcard', $fileName, 'public');

@@ -20,6 +20,18 @@
                 <span class="ml-3 item-text">Home</span>
             </a>
         </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="{{ Route('categories') }}">
+                <i class="fe fe-help-circle fe-16"></i>
+                <span class="ml-3 item-text">Kategori</span>
+            </a>
+        </li>
+        <li class="nav-item w-100">
+            <a class="nav-link" href="{{ Route('cars') }}">
+                <i class="fe fe-help-circle fe-16"></i>
+                <span class="ml-3 item-text">Mobil</span>
+            </a>
+        </li>
     </ul>
     <p class="text-muted nav-heading mt-4 mb-1">
         <span>Components</span>

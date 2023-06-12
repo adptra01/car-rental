@@ -21,6 +21,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/back/css/app-light.css" id="lightTheme">
     <link rel="stylesheet" href="/back/css/app-dark.css" id="darkTheme" disabled>
+    @yield('css')
     @vite([])
 </head>
 
@@ -67,7 +68,7 @@
                     <div class="col-12">
                         <div class="row align-items-center mb-2">
                             <div class="col">
-                                <h2 class="h5 page-title">Welcome {{ Auth()->user()->name }}</h2>
+                                <h2 class="h5 page-title">{{ $title }}</h2>
                             </div>
 
                         </div>
@@ -75,9 +76,7 @@
                 </div> <!-- .row -->
             </div> <!-- .container-fluid -->
             <div class="container-fluid">
-                <div class="card">
-                    {{ $slot }}
-                </div>
+                {{ $slot }}
             </div>
         </main> <!-- main -->
     </div> <!-- .wrapper -->
@@ -117,6 +116,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
     </script>
+    @yield('script')
 </body>
 
 </html>
